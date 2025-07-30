@@ -1,4 +1,4 @@
-package src;
+package src.Exceptions;
 
 public class RetailInventoryException extends RuntimeException {
     public RetailInventoryException(String message) {
