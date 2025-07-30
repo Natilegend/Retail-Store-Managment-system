@@ -1,4 +1,4 @@
-package src.Exception.util;
+package src.util;
 
 import src.Exception.RetailInventoryException;
 

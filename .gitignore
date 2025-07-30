@@ -5,6 +5,7 @@ out/
 src/lib/sqlite-jdbc-3.50.2.0.jar
 log/activity.txt
 inventory.db
+.idea/
 
 ### Eclipse ###
 .apt_generated
