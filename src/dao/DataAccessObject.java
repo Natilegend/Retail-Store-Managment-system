@@ -1,6 +1,6 @@
-package dao;
+package src.dao;
 
-import Exception.RetailInventoryException;
+import src.Exception.RetailInventoryException;
 
 public interface DataAccessObject<T> {
     void create(T entity) throws RetailInventoryException;
