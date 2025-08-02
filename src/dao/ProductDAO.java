@@ -1,9 +1,9 @@
-package dao;
+package src.dao;
 
-import model.Product;
-import model.Category;
-import util.DatabaseUtil;
-import Exception.RetailInventoryException;
+import src.model.Product;
+import src.model.Category;
+import src.util.DatabaseUtil;
+import src.Exception.RetailInventoryException;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -35,7 +35,7 @@ public class ProductDAO implements DataAccessObject<Product> {
             stmt.setInt(1, id);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                Category category = new Category(rs.getInt("cat_id"), rs.getString("cat_name"));
+                Category category = new Category(rs.getString("cat_name"), rs.getInt("cat_id"));
                 return new Product(rs.getInt("id"), rs.getString("name"), rs.getDouble("price"), rs.getInt("quantity"), category);
             }
             return null;
@@ -79,7 +79,7 @@ public class ProductDAO implements DataAccessObject<Product> {
              PreparedStatement stmt = conn.prepareStatement(sql);
              ResultSet rs = stmt.executeQuery()) {
             while (rs.next()) {
-                Category category = new Category(rs.getInt("cat_id"), rs.getString("cat_name"));
+                Category category = new Category(rs.getString("cat_name"), rs.getInt("cat_id"));
                 products.add(new Product(rs.getInt("id"), rs.getString("name"), rs.getDouble("price"), rs.getInt("quantity"), category));
             }
             return products;
