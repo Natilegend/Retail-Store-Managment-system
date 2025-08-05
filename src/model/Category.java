@@ -1,4 +1,4 @@
-package src.model;
+package model;
 
 public class Category extends InventoryItem {
     public Category(String name, int id) {

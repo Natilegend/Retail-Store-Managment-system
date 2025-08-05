@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Retail-Store-Managment-System.iml" filepath="$PROJECT_DIR$/Retail-Store-Managment-System.iml" />
-      <module fileurl="file://$PROJECT_DIR$/src/Retail-Store-Managment-System2.iml" filepath="$PROJECT_DIR$/src/Retail-Store-Managment-System2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Retail-Store-Managment-system.iml" filepath="$PROJECT_DIR$/Retail-Store-Managment-system.iml" />
     </modules>
   </component>
 </project>

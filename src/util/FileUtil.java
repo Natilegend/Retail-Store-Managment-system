@@ -1,6 +1,6 @@
-package src.util;
+package util;
 
-import src.Exception.RetailInventoryException;
+import Exception.RetailInventoryException;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

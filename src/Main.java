@@ -1,9 +1,7 @@
-package src;
-
-import src.model.Category;
-import src.model.Product;
-import src.service.InventoryService;
-import src.Exception.RetailInventoryException;
+import model.Category;
+import model.Product;
+import service.InventoryService;
+import Exception.RetailInventoryException;
 
 import java.util.Scanner;
 
@@ -14,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             // Initialize the database and create tables if they don't exist
-            src.util.DatabaseUtil.initializeDatabase();
+            util.DatabaseUtil.initializeDatabase();
         } catch (RuntimeException e) {
             System.out.println("Fatal Error: Could not initialize the database.");
             e.printStackTrace();

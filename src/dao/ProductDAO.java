@@ -1,9 +1,9 @@
-package src.dao;
+package dao;
 
-import src.model.Product;
-import src.model.Category;
-import src.util.DatabaseUtil;
-import src.Exception.RetailInventoryException;
+import model.Product;
+import model.Category;
+import util.DatabaseUtil;
+import Exception.RetailInventoryException;
 
 import java.sql.*;
 import java.util.ArrayList;

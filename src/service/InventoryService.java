@@ -1,11 +1,11 @@
-package src.service;
+package service;
 
-import src.dao.ProductDAO;
-import src.dao.CategoryDAO;
-import src.model.Product;
-import src.model.Category;
-import src.util.FileUtil;
-import src.Exception.RetailInventoryException;
+import dao.ProductDAO;
+import dao.CategoryDAO;
+import model.Product;
+import model.Category;
+import util.FileUtil;
+import Exception.RetailInventoryException;
 
 import java.util.List;
 import java.util.Set;

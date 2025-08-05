@@ -1,8 +1,8 @@
-package src.dao;
+package dao;
 
-import src.model.Category;
-import src.util.DatabaseUtil;
-import src.Exception.RetailInventoryException;
+import model.Category;
+import util.DatabaseUtil;
+import Exception.RetailInventoryException;
 
 import java.util.HashSet;
 import java.util.Set;
