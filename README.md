@@ -9,5 +9,10 @@ The "src" folder is treated as a package in our project setup. Although we attem
 ## Setup Instructions
 1. Ensure Java 21 is installed.
 2. Place the SQLite JDBC driver JAR in the `lib` folder.
-3. Compile the source code 
+3. Compile the source code using 
+    """
+    
+    javac -cp "lib\sqlite-jdbc-3.50.1.0.jar" -d out (Get-ChildItem -Recurse -Filter *.java -Path src | ForEach-Object { $_.FullName })
+
+    """
 4. Run the application
