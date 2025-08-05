@@ -11,7 +11,6 @@ public class Main {
 
     public static void main(String[] args) {
         try {
-            // Initialize the database and create tables if they don't exist
             util.DatabaseUtil.initializeDatabase();
         } catch (RuntimeException e) {
             System.out.println("Fatal Error: Could not initialize the database.");
