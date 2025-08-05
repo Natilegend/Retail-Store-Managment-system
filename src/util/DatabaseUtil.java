@@ -2,45 +2,17 @@ package src.util;
 
 import src.Exception.RetailInventoryException;
 
-import java.io.InputStream;
-import java.io.IOException;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.Properties;
+
 
 public class DatabaseUtil {
-    private static final String URL;
-    private static final String USER;
-    private static final String PASSWORD;
-
-    static {
-        try {
-            Class.forName("org.sqlite.JDBC");
-
-            Properties prop = new Properties();
-            try (InputStream input = DatabaseUtil.class.getClassLoader().getResourceAsStream("config/dbconfig.properties")) {
-
-                if (input == null) {
-                    throw new RuntimeException("Cannot find dbconfig.properties in the 'config' directory.");
-                }
-
-                prop.load(input);
-                URL = prop.getProperty("db.url");
-                USER = prop.getProperty("db.user");
-                PASSWORD = prop.getProperty("db.password");
-
-            } catch (IOException ex) {
-                throw new RuntimeException("Error loading database configuration", ex);
-            }
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException("SQLite JDBC Driver not found. Please ensure the 'sqlite-jdbc.jar' file is in your project's classpath.", e);
-        }
-    }
 
     public static Connection getConnection() throws RetailInventoryException {
         try {
-            return DriverManager.getConnection(URL, USER, PASSWORD);
+            return DriverManager.getConnection("jdbc:sqlite:inventory.db");
         } catch (SQLException e) {
             throw new RetailInventoryException("Database connection error: " + e.getMessage());
         }
